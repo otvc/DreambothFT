@@ -89,7 +89,7 @@
 Для начала, я пытался попробовать поэксперементировать с дообучением на генерирование [конкретной кружки](data/cup/).
 После недолгой игры с гиперпараметрами (увеличил LoRA до 64 и при запуске с Guidance=15) полуились следующие результаты:
 
-<figure> <img title="a title" alt="Generated cup in the forst" height=256 src="output/cup_lora=64/cup_in_the_forest.png"> <img title="a title" alt="Generated cup on the table" height=256 src="output/cup_lora=64/cup_on_the_table.png">
+<figure> <img title="a title" alt="Generated cup in the forst" height=225 src="output/cup_lora=64/cup_in_the_forest.png"> <img title="a title" alt="Generated cup on the table" height=225 src="output/cup_lora=64/cup_on_the_table.png">
 <figcaption>"A asks cup in the forest" and "A sks cup on the table"</figcaption>
 </figure> 
 
@@ -103,7 +103,7 @@
 
 Также варьирование параметров LORA_SCALE приводит к тому, что сохраняются некоторые параметры исходного объекта, но он становится более мультяшным и теряются некоторые локальные характеристики, которые хотелось бы сохранять. Но при этом пропадают проблемы связанные с шумами на лице
 
-|LoRA|Epochs|Guidance|LORA_SCALE_UNET|LORA_SCALE_TEXT_ENCODER|FP16| Сгенерированные изображения|Prompts|
+|LoRA|Epochs|Guidance|LS UNET|LS Encoder|FP16| Сгенерированные изображения|Prompts|
 |-|-|-|-|-|-|-|-|
 |64|1000|15|1|1|+|<img title="a title" alt="Example 1" height=100 src="output/actor_lora=64/image_2023-08-30_17-21-25.png"><img title="a title" alt="Example 1" height=100 src="output/actor_lora=64/image_2023-08-30_17-22-20.png"><img title="a title" alt="Example 1" height=100 src="output/actor_lora=64/image_2023-08-30_17-23-46.png"><img title="a title" alt="Example 1" height=100 src="output/actor_lora=64/image_2023-08-30_17-24-11.png"><img title="a title" alt="Example 1" height=100 src="output/actor_lora=64/image_2023-08-30_17-25-00.png">|A sks actor, A sks actor in the sea, A sks actor, A sks actor in the forest, A sks actor in red hat|
 |128|1000|15|1|1|+|<img title="a title" alt="Example 1" height=100 src="output/actor_lora=128/image_2023-08-30_18-43-13.png"><img title="a title" alt="Example 1" height=100 src="output/actor_lora=128/image_2023-08-30_18-38-25.png"><img title="a title" alt="Example 1" height=100 src="output/actor_lora=128/photo_2023-08-30_18-42-02.jpg"><img title="a title" alt="Example 1" height=100 src="output/actor_lora=128/image_2023-08-30_18-41-15.png">|A sks actor, A sks actor in the sea, A sks actor in the forest, A sks actor in red hat|
